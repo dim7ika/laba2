@@ -1,20 +1,20 @@
 # TODO  Напишите функцию count_letters
 def count_letters(text):
- letters = {}
- for char in text.lower():
-  if char.isalpha():
-   if char in letters:
-    letters[char] += 1
-   else:
-    letters[char] = 1
- return letters
+    letters = {}
+    for char in text.lower():
+        if char.isalpha():
+            if char in letters:
+                letters[char] += 1
+            else:
+                letters[char] = 1
+    return letters
 
 def calculate_frequency(letter_counts):
- total_letters = sum(letter_counts.values())
- frequencies = {}
- for letter, count in letter_counts.items():
-  frequencies[letter] = round(count / total_letters, 2)
- return frequencies
+    total_letters = sum(letter_counts.values())
+    frequencies = {}
+    for letter, count in letter_counts.items():
+        frequencies[letter] = round(count / total_letters, 2)
+    return frequencies
 
 # TODO Напишите функцию calculate_frequency
 main_str = """
@@ -56,5 +56,5 @@ letter_counts = count_letters(main_str)
 letter_frequencies = calculate_frequency(letter_counts)
 
 for letter, frequency in letter_frequencies.items():
- print(f"{letter}: {frequency:.2f}")
+    print(f"{letter}: {frequency:.2f}")
 # TODO Распечатайте в столбик букву и её частоту в тексте
